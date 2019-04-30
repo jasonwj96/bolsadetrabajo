@@ -1,4 +1,4 @@
-@import "../styles/theme";
+@import "../styles/light_theme";
 
 .navbar-container {
   @include card(3);
@@ -57,14 +57,18 @@
 
   .navbar-tabs {
     @include card(1);
+    display: flex;
+    padding: 0 5px;
+    height: auto;
+    width: auto;
+    justify-content: space-between;
 
-    padding-top: 10px;
     ul {
       width: auto;
       display: flex;
       list-style: none;
       text-decoration: none;
-      color: #fff;
+      color: #ffffffbd;
       padding: 0 5px;
       align-self: flex-end;
       align-items: center;
@@ -77,15 +81,109 @@
         height: 100%;
         transition: 0.1s border-color ease-in;
         width: 150px;
-        padding-bottom: 10px;
+        padding: 5px;
 
         p {
           align-self: flex-end;
         }
 
         &:hover {
+          color: #ffffff;
           border-bottom: 5px solid #fff;
         }
+      }
+    }
+
+    .searchbox {
+      display: flex;
+      align-items: center;
+      align-self: center;
+      width: auto;
+      padding: 5px;
+
+      .search-icon {
+        background-color: #ffffff2c;
+        height: 30px;
+        width: 40px;
+        border-radius: 4px 0 0 4px;
+        display: flex;
+        align-items: center;
+
+        i {
+          width: 50px;
+          color: #fff;
+          text-align: center;
+        }
+      }
+
+      input {
+        color: #fff;
+        font-size: 1em;
+        width: 200px;
+        border-radius: 0 4px 4px 0;
+        outline: none;
+        background-color: #ffffff2c;
+        border: none;
+        margin: 5px 0;
+        padding: 0px 10px;
+        height: 30px;
+
+        &::placeholder {
+          color: #ffffff9a;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    .navbar-top {
+      img {
+      }
+
+      .hamburger {
+        &:hover {
+        }
+
+        div {
+        }
+      }
+
+      p {
+      }
+    }
+
+    .navbar-tabs {
+      @include card(1);
+      justify-content: space-evenly;
+      padding: 0;
+      flex-flow: column;
+
+      ul {
+        padding: 0;
+        flex-flow: column;
+        color: #fff;
+        li {
+          padding: 0;
+          margin: 0;
+          border: none;
+          width: 100%;
+          height: 50px;
+
+          p {
+            align-self: center;
+            font-size: 0.9em;
+          }
+
+          &:hover {
+            border: none;
+            background-color: $secondary;
+          }
+        }
+      }
+
+      .searchbox {
       }
     }
   }

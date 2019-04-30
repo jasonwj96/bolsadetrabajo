@@ -4,7 +4,7 @@ import "./navbar.scss";
 import fiscLogo from "../img/fisc_logo.png";
 
 const Navbar = (props: any) => {
-  const selectItem = (event: any) => {};
+  // const selectItem = (event: any) => {};
 
   return (
     <div className="navbar-container">
@@ -33,6 +33,12 @@ const Navbar = (props: any) => {
             <p>Ayuda</p>
           </li>
         </ul>
+        <div className="searchbox">
+          <div className="search-icon">
+            <i className="fas fa-search" />
+          </div>
+          <input type="text" name="search" placeholder="Buscar" />
+        </div>
       </div>
     </div>
   );
