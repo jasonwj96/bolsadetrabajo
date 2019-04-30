@@ -1,0 +1,70 @@
+@import "../styles/theme";
+
+.navbar-container {
+  @include card(3);
+  width: auto;
+  // margin: 0px 10px;
+  border-radius: 0px;
+  height: auto;
+  display: flex;
+  background-color: $accent;
+
+  img {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 45px;
+    width: auto;
+    margin: 10px;
+    border: 3px solid #fff;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-flow: column;
+    margin: auto 10px auto 0px;
+    width: auto;
+    padding: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    div {
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      margin: 1.5px 0;
+      border-radius: 2px;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 5px;
+    align-self: flex-end;
+    align-items: center;
+    height: 100%;
+
+    li {
+      box-sizing: border-box;
+      display: flex;
+      border-bottom: 5px solid $accent;
+      height: 100%;
+      justify-items: center;
+      align-content: center;
+      transition: 0.1s border-color ease-in;
+      width: 150px;
+
+      p {
+        align-self: center;
+      }
+
+      &:hover {
+        border-bottom: 5px solid #fff;
+      }
+    }
+  }
+}

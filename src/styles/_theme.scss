@@ -1,0 +1,7 @@
+// $accent: #01680a;
+$accent: #1b5e20;
+
+@mixin card($elevation: 1) {
+  box-shadow: 0 (1px * $elevation) (2px * $elevation) 0.5px #0000004d,
+    0 (1px * $elevation) (2px * $elevation) 0.5px #0000005b;
+}
