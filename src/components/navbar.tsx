@@ -8,27 +8,32 @@ const Navbar = (props: any) => {
 
   return (
     <div className="navbar-container">
-      <img src={utpLogo} alt="utp logo" />
-      <div className="hamburger">
-        <div />
-        <div />
-        <div />
+      <div className="navbar-top">
+        <img src={utpLogo} alt="utp logo" />
+        <div className="hamburger">
+          <div />
+          <div />
+          <div />
+        </div>
+        <h1>Cuenta del estudiante</h1>
+        <img src={fiscLogo} alt="fisc logo" />
       </div>
-      <ul>
-        <li>
-          <p>Oportunidades</p>
-        </li>
-        <li>
-          <p>Cuenta</p>
-        </li>
-        <li>
-          <p>Mensajes</p>
-        </li>
-        <li>
-          <p>Ayuda</p>
-        </li>
-      </ul>
-      <img src={fiscLogo} alt="fisc logo" />
+      <div className="navbar-tabs">
+        <ul>
+          <li>
+            <p>Oportunidades</p>
+          </li>
+          <li>
+            <p>Cuenta</p>
+          </li>
+          <li>
+            <p>Mensajes</p>
+          </li>
+          <li>
+            <p>Ayuda</p>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
