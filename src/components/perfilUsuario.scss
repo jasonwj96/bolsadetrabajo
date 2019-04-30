@@ -1,0 +1,68 @@
+@import "../styles/light_theme";
+
+.perfilusuario-container {
+  @include card(1);
+  width: auto;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+
+  .profile {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: auto;
+    margin-left: 50px;
+
+    .cambiar-perfil {
+      @include card(2);
+      display: flex;
+      align-items: center;
+      background-color: $terciary;
+      width: auto;
+      padding: 10px;
+      border-radius: 50%;
+      height: auto;
+      margin: -50px -120px 0 0;
+
+      i {
+        color: #fff;
+      }
+    }
+
+    .fecha-creacion {
+      @include card(1);
+
+      display: flex;
+      align-items: center;
+      background-color: $accent;
+      width: 100px;
+      padding: 5px 0;
+      border-radius: 5px;
+      height: auto;
+      margin-top: 20px;
+
+      p {
+        font-size: 0.7em;
+        text-align: center;
+        color: #fff;
+      }
+    }
+  }
+
+  img {
+    border: $accent 3px solid;
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .info-usuario {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}
