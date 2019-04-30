@@ -10,23 +10,25 @@
   background-color: $accent;
 
   .navbar-top {
+    @include card(1);
+    background-color: $secondary;
     display: flex;
     width: 100%;
-    padding-bottom: 5px;
+    padding: 10px 0px;
 
     img {
       background-color: #fff;
       border-radius: 50%;
       height: 45px;
       width: auto;
-      margin: 10px;
+      margin: auto 10px;
       border: 3px solid #fff;
     }
 
     .hamburger {
       display: flex;
       flex-flow: column;
-      margin: auto 0px;
+      margin: auto 0px auto 10px;
       width: auto;
       padding: 10px;
 
@@ -43,17 +45,22 @@
       }
     }
 
-    h1 {
+    p {
+      font-size: 1.3em;
       width: auto;
       color: #fff;
       align-self: center;
-      font-weight: 500;
-      margin-right: auto;
+      font-weight: 400;
+      margin: 0px auto 0px 20px;
     }
   }
 
   .navbar-tabs {
+    @include card(1);
+
+    padding-top: 10px;
     ul {
+      width: auto;
       display: flex;
       list-style: none;
       text-decoration: none;

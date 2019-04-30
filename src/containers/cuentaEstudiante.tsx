@@ -1,11 +1,11 @@
 import React from "react";
-import Heading from "../components/heading";
 import "./cuentaEstudiante.scss";
+import Navbar from "../components/navbar";
 
 const CuentaEstudiante = (props: any) => {
   return (
     <div className="cuentaestudiante-container">
-      <Heading />
+      <Navbar />
     </div>
   );
 };
