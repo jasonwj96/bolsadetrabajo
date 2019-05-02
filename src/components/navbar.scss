@@ -168,55 +168,71 @@
   animation: grow 0.1s ease-in-out forwards;
 }
 
-@media only screen and (max-width: 600px) {
-  .navbar-container {
-    .navbar-top {
-      img {
-      }
+// @media only screen and (max-width: 600px) {
+//   .navbar-container {
+//     top: 0;
+//     animation: none;
 
-      .hamburger {
-        &:hover {
-        }
+//     .navbar-top {
+//       img {
+//       }
 
-        div {
-        }
-      }
+//       .hamburger {
+//         &:hover {
+//         }
 
-      p {
-      }
-    }
+//         div {
+//         }
+//       }
 
-    .navbar-tabs {
-      @include card(1);
-      justify-content: space-evenly;
-      padding: 0;
-      flex-flow: column;
+//       p {
+//       }
+//     }
 
-      ul {
-        padding: 0;
-        flex-flow: column;
-        color: #fff;
-        li {
-          padding: 0;
-          margin: 0;
-          border: none;
-          width: 100%;
-          height: 50px;
+//     .navbar-tabs {
+//       @include card(1);
+//       justify-content: space-evenly;
+//       padding: 0;
+//       flex-flow: column;
+//       display: none;
 
-          p {
-            align-self: center;
-            font-size: 0.9em;
-          }
+//       ul {
+//         padding: 0;
+//         flex-flow: column;
+//         color: #fff;
+//         width: 100%;
+//         li {
+//           padding: 0;
+//           margin: 0;
+//           border: none;
+//           width: 100%;
+//           height: 50px;
 
-          &:hover {
-            border: none;
-            background-color: $secondary;
-          }
-        }
-      }
+//           p {
+//             align-self: center;
+//             font-size: 0.9em;
+//           }
 
-      .searchbox {
-      }
-    }
-  }
-}
+//           &:hover {
+//             border: none;
+//             background-color: $secondary;
+//           }
+//         }
+//       }
+
+//       .searchbox {
+//         box-sizing: border-box;
+//         padding: 10px;
+//         width: 100%;
+//         input {
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+
+//   .navbar-container-hidden {
+//     top: 0;
+//     animation: none;
+//   }
+// }

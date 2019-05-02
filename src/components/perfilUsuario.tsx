@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 // import profile from "../img/profile.jpg";
 import profile from "../img/profile_placeholder.png";
 import "./perfilUsuario.scss";
 
 const PerfilUsuario = (props: any) => {
+  const [inputActive, setInputActive] = useState(false);
+
+  const handleInputClick = () => {
+    setInputActive(!inputActive);
+  };
+
   return (
     <div className="perfilusuario-container">
       <div className="profile">
@@ -15,6 +21,18 @@ const PerfilUsuario = (props: any) => {
           <p>Usuario desde: 30/4/19</p>
         </div>
       </div>
+      <form className="form">
+        <div className={inputActive ? "input-enabled" : "input-disabled"}>
+          <fieldset>
+            <legend>Nombre</legend>
+            <input
+              type="text"
+              onFocus={handleInputClick}
+              onBlur={handleInputClick}
+            />
+          </fieldset>
+        </div>
+      </form>
 
       <div className="info-usuario" />
     </div>

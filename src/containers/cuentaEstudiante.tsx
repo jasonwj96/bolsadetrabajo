@@ -8,10 +8,6 @@ const CuentaEstudiante = (props: any) => {
     <div className="cuentaestudiante-container">
       <Navbar />
       <PerfilUsuario />
-      <PerfilUsuario />
-      <PerfilUsuario />
-      <PerfilUsuario />
-      <PerfilUsuario />
     </div>
   );
 };

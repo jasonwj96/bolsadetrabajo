@@ -1,5 +1,37 @@
 @import "../styles/light_theme";
 
+@mixin input {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  width: 200px;
+
+  fieldset {
+    margin: 10px 0px;
+    border: 2px solid $disabled;
+    border-radius: 4px;
+    height: auto;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    legend {
+      color: $disabled;
+      width: auto;
+      margin-left: 5px;
+      border: 5px solid transparent;
+      font-size: 0.8em;
+      text-align: left;
+    }
+
+    input {
+      padding: 0;
+      font-size: 1em;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
 .perfilusuario-container {
   @include card(1);
   width: auto;
@@ -49,6 +81,32 @@
         font-size: 0.7em;
         text-align: center;
         color: #fff;
+      }
+    }
+  }
+
+  .form {
+    margin: 0px 10px 0px 100px;
+
+    .input-enabled {
+      @include input();
+      fieldset {
+        border: 2px solid $accent;
+
+        legend {
+          color: $accent;
+        }
+      }
+    }
+
+    .input-disabled {
+      @include input();
+      fieldset {
+        border: 2px solid $disabled;
+
+        legend {
+          color: $disabled;
+        }
       }
     }
   }
