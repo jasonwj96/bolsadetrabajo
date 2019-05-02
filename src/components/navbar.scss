@@ -1,9 +1,10 @@
 @import "../styles/light_theme";
 
-.navbar-container {
+@mixin navbar {
+  position: fixed;
   @include card(3);
-  width: auto;
-  border-radius: 0px;
+  top: 0;
+  width: 100%;
   height: auto;
   display: flex;
   flex-flow: column;
@@ -19,7 +20,7 @@
     img {
       background-color: #fff;
       border-radius: 50%;
-      height: 45px;
+      height: 35px;
       width: auto;
       margin: auto 10px;
       border: 3px solid #fff;
@@ -135,6 +136,36 @@
       }
     }
   }
+}
+
+@keyframes shrink {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: -61px;
+  }
+}
+
+@keyframes grow {
+  from {
+    top: -61px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+.navbar-container-hidden {
+  @include navbar();
+  animation: shrink 0.1s ease-in-out forwards;
+}
+
+.navbar-container {
+  @include navbar();
+  animation: grow 0.1s ease-in-out forwards;
 }
 
 @media only screen and (max-width: 600px) {

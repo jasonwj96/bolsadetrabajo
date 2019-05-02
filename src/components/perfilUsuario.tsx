@@ -1,6 +1,6 @@
 import React from "react";
-import profile from "../img/profile.jpg";
-
+// import profile from "../img/profile.jpg";
+import profile from "../img/profile_placeholder.png";
 import "./perfilUsuario.scss";
 
 const PerfilUsuario = (props: any) => {
@@ -9,8 +9,6 @@ const PerfilUsuario = (props: any) => {
       <div className="profile">
         <img src={profile} alt="profile" />
         <div className="cambiar-perfil">
-          {/* <p>Cambiar perfil</p>
-           */}
           <i className="fas fa-pen" />
         </div>
         <div className="fecha-creacion">

@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.scss";
-import utpLogo from "../img/utp_logo.png";
+// import utpLogo from "../img/utp_logo.png";
 import fiscLogo from "../img/fisc_logo.png";
 
 const Navbar = (props: any) => {
-  // const selectItem = (event: any) => {};
+  const [prevScrollPos, setPrevScrollsPos] = useState(window.pageYOffset);
+  // const [shrink, setShrink] = useState(true);
+  const [className, setClassName] = useState("navbar-container");
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+
+  const handleScroll = () => {
+    if (prevScrollPos > window.pageYOffset) {
+      setClassName("navbar-container");
+    } else {
+      setClassName("navbar-container-hidden");
+    }
+    setPrevScrollsPos(window.pageYOffset);
+  };
 
   return (
-    <div className="navbar-container">
+    <div className={className}>
       <div className="navbar-top">
         <div className="hamburger">
           <div />
           <div />
           <div />
         </div>
-        <img src={utpLogo} alt="utp logo" />
+        {/* <img src={utpLogo} alt="utp logo" /> */}
 
         <p>Cuenta del estudiante</p>
         <img src={fiscLogo} alt="fisc logo" />
