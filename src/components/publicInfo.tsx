@@ -1,6 +1,5 @@
 import React from "react";
 import "./publicInfo.scss";
-import Tips from "./tips";
 
 const PublicInfo = (props: any) => {
   return (
