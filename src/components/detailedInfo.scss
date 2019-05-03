@@ -3,17 +3,28 @@
 .detailedInfo-container {
   @include card(1);
   width: auto;
+  flex-flow: column;
   padding: 10px;
   border-radius: 3px;
   margin: 20px 10px 10px 10px;
-  height: 300px;
+  height: auto;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+
+  p {
+    text-align: left;
+    color: $accent;
+    font-weight: bold;
+    margin: 0px 10px 20px 30px;
+    font-size: 1.2em;
+  }
 
   .form {
     display: flex;
+    height: 100%;
+    width: auto;
     height: auto;
-    width: 600px;
     flex-wrap: wrap;
 
     .input {
