@@ -84,9 +84,15 @@
         width: 150px;
         padding: 5px;
 
-        p {
+        .link {
           align-self: flex-end;
           padding-bottom: 5px;
+          text-decoration: none;
+          color: #ffffffbd;
+
+          &:hover {
+            color: #ffffff;
+          }
         }
 
         &:hover {

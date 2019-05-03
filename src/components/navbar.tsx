@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 // import utpLogo from "../img/utp_logo.png";
 import fiscLogo from "../img/fisc_logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = (props: any) => {
   const [prevScrollPos, setPrevScrollsPos] = useState(window.pageYOffset);
-  // const [shrink, setShrink] = useState(true);
   const [className, setClassName] = useState("navbar-container");
 
   useEffect(() => {
@@ -39,17 +39,26 @@ const Navbar = (props: any) => {
       </div>
       <div className="navbar-tabs">
         <ul>
+          {/* Oportunidades, cuenta, mensajes, ayuda */}
           <li>
-            <p>Oportunidades</p>
+            <Link className="link" to="/oportunidades">
+              Oportunidades
+            </Link>
           </li>
           <li>
-            <p>Cuenta</p>
+            <Link className="link" to="/cuenta">
+              Cuenta
+            </Link>
           </li>
           <li>
-            <p>Mensajes</p>
+            <Link className="link" to="/mensajes">
+              Mensajes
+            </Link>
           </li>
           <li>
-            <p>Ayuda</p>
+            <Link className="link" to="/ayuda">
+              Ayuda
+            </Link>
           </li>
         </ul>
         <div className="searchbox">
