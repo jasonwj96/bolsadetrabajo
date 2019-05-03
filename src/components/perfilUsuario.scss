@@ -3,14 +3,15 @@
 @mixin input {
   display: flex;
   flex-flow: column;
-  padding: 10px;
-  width: 200px;
+  padding: 6px;
+  max-width: 250px;
+  margin-right: 30px;
 
   fieldset {
-    margin: 10px 0px;
+    margin: 0px;
     border: 2px solid $disabled;
     border-radius: 4px;
-    height: auto;
+    height: 55px;
     padding: 5px 10px;
     box-sizing: border-box;
 
@@ -18,7 +19,7 @@
       color: $disabled;
       width: auto;
       margin-left: 5px;
-      border: 5px solid transparent;
+      border: 2px solid transparent;
       font-size: 0.8em;
       text-align: left;
     }
@@ -85,34 +86,41 @@
     }
   }
 
-  .form {
-    margin: 0px 10px 0px 100px;
+  .public-info {
+    display: flex;
+    flex-flow: column;
+    margin: 10px 0px 10px 50px;
+    width: auto;
+    align-self: flex-start;
 
-    .input-enabled {
-      @include input();
-      fieldset {
-        border: 2px solid $accent;
-
-        legend {
-          color: $accent;
-        }
-      }
+    p {
+      text-align: left;
+      color: $accent;
+      font-weight: bold;
+      margin: 0px 10px 50px 10px;
+      font-size: 1.2em;
     }
 
-    .input-disabled {
-      @include input();
-      fieldset {
-        border: 2px solid $disabled;
+    .form {
+      display: flex;
+      height: auto;
+      width: 600px;
+      flex-wrap: wrap;
 
-        legend {
-          color: $disabled;
+      .input {
+        @include input();
+        fieldset {
+          border: 2px solid $accent;
+
+          legend {
+            color: $accent;
+          }
         }
       }
     }
   }
 
   img {
-    // border: $accent 3px solid;
     width: 150px;
     height: auto;
     border-radius: 50%;

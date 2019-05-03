@@ -1,15 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 // import profile from "../img/profile.jpg";
 import profile from "../img/profile_placeholder.png";
 import "./perfilUsuario.scss";
 
 const PerfilUsuario = (props: any) => {
-  const [inputActive, setInputActive] = useState(false);
-
-  const handleInputClick = () => {
-    setInputActive(!inputActive);
-  };
-
   return (
     <div className="perfilusuario-container">
       <div className="profile">
@@ -21,18 +15,35 @@ const PerfilUsuario = (props: any) => {
           <p>Usuario desde: 30/4/19</p>
         </div>
       </div>
-      <form className="form">
-        <div className={inputActive ? "input-enabled" : "input-disabled"}>
-          <fieldset>
-            <legend>Nombre</legend>
-            <input
-              type="text"
-              onFocus={handleInputClick}
-              onBlur={handleInputClick}
-            />
-          </fieldset>
-        </div>
-      </form>
+      <div className="public-info">
+        <p>Información publica</p>
+        <form className="form">
+          <div className="input">
+            <fieldset>
+              <legend>Nombre</legend>
+              <input type="text" />
+            </fieldset>
+          </div>
+          <div className="input">
+            <fieldset>
+              <legend>Apellido</legend>
+              <input type="text" />
+            </fieldset>
+          </div>
+          <div className="input">
+            <fieldset>
+              <legend>Cedula</legend>
+              <input type="text" />
+            </fieldset>
+          </div>
+          <div className="input">
+            <fieldset>
+              <legend>Celular/Telefono</legend>
+              <input type="text" />
+            </fieldset>
+          </div>
+        </form>
+      </div>
 
       <div className="info-usuario" />
     </div>
