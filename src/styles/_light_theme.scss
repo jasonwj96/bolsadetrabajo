@@ -11,5 +11,50 @@ $border-color-secondary: #919191;
 }
 
 //input
-@mixin input() {
+@mixin input {
+  display: flex;
+  flex-flow: column;
+  padding: 6px;
+  max-width: 250px;
+  margin-right: 30px;
+
+  fieldset {
+    margin: 0px;
+    border: 2px solid $disabled;
+    border-radius: 4px;
+    height: auto;
+    width: 200px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+
+    legend {
+      color: $disabled;
+      width: auto;
+      margin-left: 5px;
+      border: 2px solid transparent;
+      font-size: 0.8em;
+      text-align: left;
+    }
+
+    input,
+    textarea {
+      width: 250px;
+      max-width: auto;
+      padding: 0;
+      font-size: 1em;
+      outline: none;
+      border: none;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+      width: 250px;
+      max-width: auto;
+      padding: 0;
+      font-size: 1em;
+      outline: none;
+      border: none;
+    }
+  }
 }

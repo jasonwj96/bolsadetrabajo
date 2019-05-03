@@ -1,19 +1,14 @@
 @import "../styles/light_theme";
 
-.publicinfo-container {
-  display: flex;
-  flex-flow: column;
-  margin: 10px 0px 10px 50px;
+.detailedInfo-container {
+  @include card(1);
   width: auto;
-  align-self: flex-start;
-
-  p {
-    text-align: left;
-    color: $accent;
-    font-weight: bold;
-    margin: 0px 10px 50px 10px;
-    font-size: 1.2em;
-  }
+  padding: 10px;
+  border-radius: 3px;
+  margin: 20px 10px 10px 10px;
+  height: 300px;
+  display: flex;
+  align-items: center;
 
   .form {
     display: flex;
