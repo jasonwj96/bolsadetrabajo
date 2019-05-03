@@ -9,7 +9,6 @@ const App: React.FC = () => {
     <div className="App">
       <Router>
         <div>
-          <Route exact path="/" component={CuentaEstudiante} />
           <Route path="/cuenta" component={CuentaEstudiante} />
           <Route path="/mensajes" component={Mensajes} />
         </div>
