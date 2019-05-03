@@ -1,7 +1,7 @@
 $accent: #1b5e20;
 $secondary: #217528;
 $terciary: #ffab00;
-$disabled: #949494;
+$quaternary: #949494;
 $text-color: #333;
 $border-color-secondary: #919191;
 
@@ -15,12 +15,12 @@ $border-color-secondary: #919191;
   display: flex;
   flex-flow: column;
   padding: 6px;
-  max-width: 250px;
+  width: 250px;
   margin-right: 30px;
 
   fieldset {
     margin: 0px;
-    border: 2px solid $disabled;
+    border: 2px solid $quaternary;
     border-radius: 4px;
     height: auto;
     width: 200px;
@@ -28,7 +28,7 @@ $border-color-secondary: #919191;
     box-sizing: border-box;
 
     legend {
-      color: $disabled;
+      color: $quaternary;
       width: auto;
       margin-left: 5px;
       border: 2px solid transparent;
@@ -36,9 +36,8 @@ $border-color-secondary: #919191;
       text-align: left;
     }
 
-    input,
-    textarea {
-      width: 250px;
+    input {
+      width: 200px;
       max-width: auto;
       padding: 0;
       font-size: 1em;

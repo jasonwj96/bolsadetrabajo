@@ -3,6 +3,7 @@ import React from "react";
 import profile from "../img/profile_placeholder.png";
 import "./perfilUsuario.scss";
 import PublicInfo from "./publicInfo";
+import Tips from "./tips";
 
 const PerfilUsuario = (props: any) => {
   return (
@@ -17,6 +18,7 @@ const PerfilUsuario = (props: any) => {
         </div>
       </div>
       <PublicInfo />
+      <Tips />
     </div>
   );
 };

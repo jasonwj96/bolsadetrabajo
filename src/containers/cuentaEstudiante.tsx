@@ -3,6 +3,7 @@ import "./cuentaEstudiante.scss";
 import Navbar from "../components/navbar";
 import PerfilUsuario from "../components/perfilUsuario";
 import DetailedInfo from "../components/detailedInfo";
+import Tips from "../components/tips";
 
 const CuentaEstudiante = (props: any) => {
   return (
