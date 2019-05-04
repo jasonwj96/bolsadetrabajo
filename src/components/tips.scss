@@ -2,6 +2,9 @@
 
 .tips-container {
   @include card(2);
+  background-color: $tips-bg;
+  border-radius: 4px;
+  border: $tips-border 2px solid;
   width: 400px;
   height: auto;
   margin-right: 50px;
@@ -11,7 +14,7 @@
 
   .heading {
     text-align: left;
-    color: $accent;
+    color: $tips-color;
     font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 20px;
@@ -22,7 +25,9 @@
     margin-bottom: 20px;
   }
 
-  .cambiar-contr-btn {
-    font-size: 5em;
+  button {
+    color: #fff;
+    background-color: $tips-btn;
+    font-size: 0.8em;
   }
 }

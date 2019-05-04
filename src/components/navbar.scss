@@ -78,26 +78,21 @@
       li {
         box-sizing: border-box;
         display: flex;
-        border-bottom: 5px solid $accent;
         height: 100%;
-        transition: 0.1s border-color ease-in;
         width: 150px;
-        padding: 5px;
 
         .link {
+          border-bottom: 5px solid $accent;
           align-self: flex-end;
-          padding-bottom: 5px;
+          padding-bottom: 10px;
           text-decoration: none;
           color: #ffffffbd;
+          transition: 0.1s border-color ease-in;
 
           &:hover {
             color: #ffffff;
+            border-bottom: 5px solid #fff;
           }
-        }
-
-        &:hover {
-          color: #ffffff;
-          border-bottom: 5px solid #fff;
         }
       }
     }
@@ -174,71 +169,7 @@
   animation: grow 0.1s ease-in-out forwards;
 }
 
-// @media only screen and (max-width: 600px) {
-//   .navbar-container {
-//     top: 0;
-//     animation: none;
-
-//     .navbar-top {
-//       img {
-//       }
-
-//       .hamburger {
-//         &:hover {
-//         }
-
-//         div {
-//         }
-//       }
-
-//       p {
-//       }
-//     }
-
-//     .navbar-tabs {
-//       @include card(1);
-//       justify-content: space-evenly;
-//       padding: 0;
-//       flex-flow: column;
-//       display: none;
-
-//       ul {
-//         padding: 0;
-//         flex-flow: column;
-//         color: #fff;
-//         width: 100%;
-//         li {
-//           padding: 0;
-//           margin: 0;
-//           border: none;
-//           width: 100%;
-//           height: 50px;
-
-//           p {
-//             align-self: center;
-//             font-size: 0.9em;
-//           }
-
-//           &:hover {
-//             border: none;
-//             background-color: $secondary;
-//           }
-//         }
-//       }
-
-//       .searchbox {
-//         box-sizing: border-box;
-//         padding: 10px;
-//         width: 100%;
-//         input {
-//           width: 100%;
-//         }
-//       }
-//     }
-//   }
-
-//   .navbar-container-hidden {
-//     top: 0;
-//     animation: none;
-//   }
-// }
+.navbar-init {
+  @include navbar();
+  animation: none;
+}

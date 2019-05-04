@@ -18,7 +18,7 @@ const PerfilUsuario = (props: any) => {
         </div>
       </div>
       <PublicInfo />
-      <Tips />
+      <Tips text="Si deseas cambiar tu contraseña haz click aquí" />
     </div>
   );
 };

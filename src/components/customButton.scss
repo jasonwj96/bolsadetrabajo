@@ -2,7 +2,7 @@
 
 .custombutton-container {
   @include card(1);
-  width: 100px;
+  width: auto;
   background-color: $accent;
   color: #fff;
   padding: 10px;

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props: any) => {
   const [prevScrollPos, setPrevScrollsPos] = useState(window.pageYOffset);
-  const [className, setClassName] = useState("navbar-container");
+  const [className, setClassName] = useState("navbar-init");
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
