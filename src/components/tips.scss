@@ -2,15 +2,15 @@
 
 .tips-container {
   @include card(2);
+  display: flex;
+  flex-flow: column;
   background-color: $tips-bg;
   border-radius: 4px;
   border: $tips-border 2px solid;
-  width: 400px;
-  height: auto;
-  margin-right: 50px;
+  max-width: 250px;
+  height: 100%;
+  margin: 10px;
   padding: 10px 15px;
-  display: flex;
-  flex-flow: column;
 
   .heading {
     text-align: left;
@@ -23,6 +23,7 @@
   .text {
     font-size: 0.9em;
     margin-bottom: 20px;
+    text-align: left;
   }
 
   button {

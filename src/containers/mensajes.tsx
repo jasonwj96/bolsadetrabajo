@@ -3,6 +3,8 @@ import Navbar from "../components/navbar";
 import "./mensajes.scss";
 import Footer from "components/footer";
 import EmailView from "components/emailView";
+import Tips from "components/tips";
+import CustomButton from "components/customButton";
 
 const Mensajes = (props: any) => {
   useEffect(() => {
@@ -10,9 +12,15 @@ const Mensajes = (props: any) => {
   }, []);
 
   return (
-    <div>
+    <div className="mensajes-container">
       <Navbar />
-      <EmailView />
+      <div className="email-view-tips">
+        <EmailView />
+        <Tips
+          btnActive={false}
+          text="Puedes dejarnos saber cualquier inconveniente que ocurra en nuestro sitio! Tambien quejas, si desea."
+        />
+      </div>
       <Footer />
     </div>
   );

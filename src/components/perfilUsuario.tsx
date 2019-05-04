@@ -18,7 +18,11 @@ const PerfilUsuario = (props: any) => {
         </div>
       </div>
       <PublicInfo />
-      <Tips text="Si deseas cambiar tu contraseña haz click aquí" />
+      <Tips
+        btnActive={true}
+        btnText="Cambiar contraseña"
+        text="Si deseas cambiar tu contraseña haz click aquí"
+      />
     </div>
   );
 };

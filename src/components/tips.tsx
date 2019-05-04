@@ -7,7 +7,7 @@ const Tips = (props: any) => {
     <div className="tips-container">
       <p className="heading">Tips</p>
       <p className="text">{props.text}</p>
-      <CustomButton name="Cambiar contraseña" />
+      {props.btnActive ? <CustomButton name={props.btnText} /> : null}
     </div>
   );
 };

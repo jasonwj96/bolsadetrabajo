@@ -1,0 +1,15 @@
+.mensajes-container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 120px;
+
+  .email-view-tips {
+    padding: 10px;
+    display: flex;
+    width: auto;
+  }
+
+  .tips-container {
+    margin: auto;
+  }
+}

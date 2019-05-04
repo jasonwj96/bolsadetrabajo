@@ -1,4 +1,75 @@
+@import "../styles/light_theme";
+
 .emailView-container {
-  width: auto;
-  height: 1000px;
+  @include card(1);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 950px;
+  box-sizing: border-box;
+  height: 600px;
+  margin: 20px;
+  display: flex;
+  flex-flow: column;
+  // border: $accent 2px solid;
+
+  .header {
+    width: auto;
+    background-color: $accent;
+    color: #fff;
+    font-size: 1.3em;
+    text-align: left;
+    padding: 10px 0px 10px 25px;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    width: auto;
+    margin: 0px 20px;
+    height: 2px;
+    background-color: $divider-bg;
+  }
+
+  .email-info {
+    div {
+      display: flex;
+      width: auto;
+      padding: 10px 20px;
+      text-align: left;
+      font-size: 0.9em;
+
+      span {
+        color: $accent;
+        font-weight: bold;
+        margin-right: 5px;
+
+        p {
+          width: auto;
+        }
+      }
+
+      input {
+        width: 200px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .email-body {
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: left;
+    padding: 20px;
+    width: auto;
+    height: 300px;
+    resize: none;
+    border: none;
+    outline: none;
+    // overflow-y: scroll;
+  }
+
+  button.custombutton-container {
+    align-self: flex-end;
+    margin: auto 20px 20px auto;
+  }
 }
