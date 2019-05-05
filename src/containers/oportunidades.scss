@@ -1,0 +1,22 @@
+@import "../styles/light_theme";
+
+.oportunidades-container {
+  display: flex;
+  flex-flow: column;
+  padding-top: 150px;
+
+  p.oportunidad-heading {
+    color: $accent;
+    text-align: left;
+    font-weight: bold;
+    margin: 0px 0px 10px 40px;
+    font-size: 1.4em;
+    width: auto;
+  }
+
+  .list-tips {
+    display: flex;
+    width: auto;
+    margin-left: 20px;
+  }
+}

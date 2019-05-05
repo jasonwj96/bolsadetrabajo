@@ -24,10 +24,10 @@
     .input {
       @include input();
       fieldset {
-        border: 2px solid $accent;
+        border: 2px solid $quaternary;
 
         legend {
-          color: $accent;
+          color: $quaternary;
         }
       }
     }

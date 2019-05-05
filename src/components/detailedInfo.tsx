@@ -52,7 +52,7 @@ const DetailedInfo = (props: any) => {
         <div className="input">
           <fieldset>
             <legend>Adjuntar hoja de vida</legend>
-            <input type="text" />
+            <input type="file" />
           </fieldset>
         </div>
       </form>

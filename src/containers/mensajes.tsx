@@ -4,7 +4,6 @@ import "./mensajes.scss";
 import Footer from "components/footer";
 import EmailView from "components/emailView";
 import Tips from "components/tips";
-import CustomButton from "components/customButton";
 
 const Mensajes = (props: any) => {
   useEffect(() => {
