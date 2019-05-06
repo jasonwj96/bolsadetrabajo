@@ -1,15 +1,18 @@
 import React from "react";
 import "./App.scss";
 import CuentaEstudiante from "./containers/cuentaEstudiante";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import Mensajes from "./containers/mensajes";
 import Oportunidades from "containers/oportunidades";
 import Ayuda from "containers/ayuda";
+import { createBrowserHistory } from "history";
 
-const App = () => {
+const customHistory = createBrowserHistory();
+
+const App = (props: any) => {
   return (
     <div className="App">
-      <Router>
+      <Router history={customHistory}>
         <div>
           <Route exact path="/" component={CuentaEstudiante} />
           <Route path="/cuenta" component={CuentaEstudiante} />
