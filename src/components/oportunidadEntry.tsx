@@ -6,7 +6,7 @@ import CustomButton from "./customButton";
 const OportunidadEntry = (props: any) => {
   return (
     <div className="oportunidadentry-container">
-      <img src={pcLogo} />
+      <img src={pcLogo} alt="imagen compañia" />
       <div className="oportunidad-info">
         <p className="header">
           Se necesita desarrollador de software - Corporaciones, S.A.
